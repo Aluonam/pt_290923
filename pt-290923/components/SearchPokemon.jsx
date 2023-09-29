@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import AbilitiesList from './AbilitiesList'
 
 const SearchPokemon = () => {
 
@@ -17,9 +18,12 @@ const SearchPokemon = () => {
         setDataAPI(data)
     }
 
+   
+
   return (
     <>
     <input onChange={(e)=>{setDataInput(e.target.value)}} value={dataInput}></input>
+    <AbilitiesList dataAPI={dataAPI}></AbilitiesList>
     </>
   )
 }
